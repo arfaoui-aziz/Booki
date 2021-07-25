@@ -1,6 +1,6 @@
 .logo {
   height: 3.25rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .search {
@@ -8,7 +8,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -16,8 +16,8 @@
     border: none;
     padding: 0.7rem 2rem;
     border-radius: 10rem;
-    width: 90%;
-    transition: all 0.2;
+    width: 32%;
+    transition: all 0.9s;
     margin-right: -3.25rem;
     &:focus {
       outline: none;
@@ -54,26 +54,49 @@
 
 //User Navigation
 .user-nav {
+  align-self: stretch;
   display: flex;
-  justify-content: flex-end;
+  margin-right: 2rem;
+  // justify-content: space-between;
+  align-items: center;
+
+  & > * {
+    cursor: pointer;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  & > *:hover {
+    cursor: pointer;
+    background-color: var(--grey-light-2);
+  }
   &__icon-box {
+    position: relative;
   }
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
-    fill: var(--grey-dark-3);
+    fill: var(--grey-dark-2);
   }
   &__notification {
-  }
-
-  &__user {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
-  }
-
-  &__user-name {
+    margin-right: 1rem;
   }
 }
