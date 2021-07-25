@@ -10,6 +10,8 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: 1px solid var(--grey-light-2);
+  display: flex;
+  justify-content: space-between;
 }
 
 .content {
@@ -19,9 +21,10 @@
 .sidebar {
   background-color: var(--color-secondary);
   flex: 0 0 18%;
+  min-height: 50rem;
 }
 
 .hotel-view {
-  background-color: orangered;
+  background-color: #e5e5e5;
   flex: 1;
 }
