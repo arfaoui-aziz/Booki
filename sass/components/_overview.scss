@@ -1,0 +1,32 @@
+.overview {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    border: 1px solid red;
+  }
+  &__heading {
+  }
+  &__stars {
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &__rating {
+    margin-right: 2rem;
+  }
+
+  &__rating-average {
+  }
+  &__rating-count {
+  }
+}
