@@ -28,9 +28,68 @@
   margin-right: 4.5rem;
   padding: 3rem;
   box-shadow: var(--shadow-light);
+  & > * {
+    // border: 2px solid red;
+  }
 }
 
 .user-reviews {
   background-color: var(--color-white);
   flex: 1;
+}
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+
+      display: inline-block;
+      margin-right: 0.7rem;
+
+      //   background-image: url(../img/chevron-thin-right.svg);
+
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+    }
+  }
+}
+
+.recommend {
+  font: size 1.3rem;
+  color: var(--grey-dark-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+    border: 3px solid #fff;
+  }
 }
