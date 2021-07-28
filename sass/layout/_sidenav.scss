@@ -2,11 +2,23 @@
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem;
+  align-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
   &__item {
     position: relative;
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -43,6 +55,9 @@
     display: flex;
     align-items: center;
     position: relative;
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+    }
   }
   &__icon {
     width: 1.75rem;
@@ -57,4 +72,7 @@
   color: var(--grey-light-4);
   text-align: center;
   padding: 2.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
