@@ -9,6 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media only screen and (max-width: $bp-xs) {
+    order: 1;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -19,6 +26,9 @@
     width: 32%;
     transition: all 0.9s;
     margin-right: -3.25rem;
+    @media only screen and (max-width: $bp-xs) {
+      width: 90%;
+    }
     &:focus {
       outline: none;
       width: 100%;
