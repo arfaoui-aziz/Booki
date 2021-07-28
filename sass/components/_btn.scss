@@ -30,6 +30,49 @@
   &:focus {
     outline: none;
   }
+
+  &--cta {
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-primary-dark)
+    );
+
+    border-radius: 100px;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    // padding: 2rem 7.5rem;
+    position: relative;
+    overflow: hidden;
+
+    & > * {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      transition: all 0.2s;
+    }
+
+    &:hover .btn__visible {
+      transform: translateY(100%);
+    }
+
+    &:hover .btn__invisible {
+      top: 0;
+    }
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+  }
 }
 
 @keyframes pulse {
