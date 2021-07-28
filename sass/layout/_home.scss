@@ -82,13 +82,17 @@
       display: inline-block;
       margin-right: 0.7rem;
 
-      //   background-image: url(../img/chevron-thin-right.svg);
+      background-image: url(../img/chevron-thin-right.svg);
 
-      background-color: var(--color-primary);
-      -webkit-mask-image: url(../img/chevron-thin-right.svg);
-      -webkit-mask-size: cover;
-      mask-image: url(../img/chevron-thin-right.svg);
-      mask-size: cover;
+      @supports (-webkit-mask-image: url(../img/chevron-thin-right.svg)) or
+        (mask-image: url(../img/chevron-thin-right.svg)) {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        background-image: none;
+      }
     }
   }
 }
