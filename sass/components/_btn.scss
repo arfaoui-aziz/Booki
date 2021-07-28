@@ -54,12 +54,24 @@
       transition: all 0.2s;
     }
 
+    &:hover {
+      background-image: linear-gradient(
+        to left,
+        var(--color-primary),
+        var(--color-primary-dark)
+      );
+    }
+
     &:hover .btn__visible {
       transform: translateY(100%);
     }
 
     &:hover .btn__invisible {
       top: 0;
+    }
+
+    &:focus {
+      animation: pulse 1s infinite;
     }
   }
 
